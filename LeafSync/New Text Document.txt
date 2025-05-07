@@ -1,0 +1,7 @@
+i have a created an agriculture based app called "agrozapp". it consist of a dashboard showing soil analysis  using npk values , moisture ,temperature, location. also shows map of the location searched. it also consist for two models - 1) pest classification 2) plant disease classification.
+based on these outcomes we design a solution using groq model. i also have a chatbot using ollama which runs locally. now i created this for hackathon in 24hrs. this idea was my team leaders . i want to use this website for my project work in college. but i don't want to plagarise this because it is not my idea just worked as apart. i want to repurpose this website to a phone app and do something differently. i want you to suggest me idea. also the tech stack used :
+frontend - reactjs,
+backend - Django drf 
+database - postgre sql 
+models - self trained in .py , .pth , alsi used groq api , ollama local
+                 

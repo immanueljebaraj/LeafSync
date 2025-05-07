@@ -1,0 +1,140 @@
+{
+  "expo": {
+    "name": "Agro Tasker",
+    "slug": "agro-tasker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "agrotasker",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow AgroTasker to access your photos to select plant images for disease detection.",
+          "cameraPermission": "Allow AgroTasker to use your camera to take photos of plants for disease detection.",
+          "savePhotosPermission": "Allow AgroTasker to save photos to your gallery."
+        }
+      ],
+      [
+        "@react-native-community/datetimepicker",
+        {
+          "mode": "spinner",
+          "iosDisplay": "spinner"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#4CAF50",
+          "sounds": ["./assets/notification-sound.wav"]
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow AgroTasker to access your location to show soil data for your field."
+        }
+      ]
+    ],
+    "ios": {
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Allow AgroTasker to access your photos to select plant images for disease detection.",
+        "NSCameraUsageDescription": "Allow AgroTasker to use your camera to take photos of plants for disease detection.",
+        "NSMicrophoneUsageDescription": "Allow AgroTasker to use your microphone when recording videos.",
+        "NSLocationWhenInUseUsageDescription": "Allow AgroTasker to access your location to show soil data for your field",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Allow AgroTasker to access your location to show soil data for your field",
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true,
+          "NSExceptionDomains": {
+            "localhost": {
+              "NSExceptionAllowsInsecureHTTPLoads": true,
+              "NSIncludesSubdomains": true
+            },
+            "tile.openstreetmap.org": {
+              "NSIncludesSubdomains": true,
+              "NSExceptionAllowsInsecureHTTPLoads": true
+            },
+            "tiles.openlandmap.org": {
+              "NSIncludesSubdomains": true,
+              "NSExceptionAllowsInsecureHTTPLoads": true
+            },
+            "unpkg.com": {
+              "NSIncludesSubdomains": true,
+              "NSExceptionAllowsInsecureHTTPLoads": true
+            }
+          }
+        },
+        "UIBackgroundModes": ["remote-notification", "location"]
+      },
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.agrotasker",
+      "buildNumber": "1.0.0",
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "usesAppleSignIn": false,
+      "requireFullScreen": false
+    },
+    "android": {
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.yourcompany.agrotasker",
+      "versionCode": 1,
+      "softwareKeyboardLayoutMode": "pan",
+      "usesCleartextTraffic": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "config": {
+        "devClient": false
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id-here"
+      },
+      "apiUrl": {
+        "development": {
+          "android": "http://10.0.2.2:8000/api/",
+          "ios": "http://localhost:8000/api/"
+        },
+        "production": "https://api.agrotasker.com/api/"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/your-project-id-here",
+      "fallbackToCacheTimeout": 3000
+    },
+    "notification": {
+      "icon": "./assets/notification-icon.png",
+      "color": "#4CAF50",
+      "iosDisplayInForeground": true,
+      "androidMode": "default"
+    }
+  }
+}
